@@ -21,29 +21,28 @@ function loving(){
         if (b==4 || b==6 || b==9 || b==11){
             if (c>=31){
                 check_date = false;
-                alert('Wrong date. Please re-input the first date.')
             }
         }
         else {
             if (b==2){
+                if(c>=30){
+                    check_date = false;
+                }
                 if (a%400==0){
                     if (c>=29){
                         check_date = false;
-                        alert('Wrong date. Please re-input the first date.')
                     }
                 }
                 else {
                     if (a%4==0) {
                         if (c>=30){
-                        check_date = false;
-                        alert('Wrong date. Please re-input the first date.') 
+                            check_date = false; 
                         }
+                    }
                     else {
                         if (c>=29){
                             check_date = false;
-                            alert('Wrong date. Please re-input the first date.') 
                         }
-                    }
                     }
                 }
             }
